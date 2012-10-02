@@ -7,6 +7,8 @@
           fetch="git://github.com/mozilla-b2g/" />
   <remote  name="linaro"
            fetch="git://android.git.linaro.org/" />
+  <remote  name="gh"
+           fetch="git://github.com/" />
   <remote name="mozilla"
 	  fetch="git://github.com/mozilla/" />
   <default revision="refs/tags/android-4.0.4_r1.2"
