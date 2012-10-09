@@ -97,7 +97,7 @@
 
   <!-- Galaxy GIO things -->
   <project path="vendor/samsung/gio" name="MoltenMotherBoard/proprietary_vendor_samsung_gio" remote="gh" revision="master" />
-  <project path="device/samsung/gio" name="MoltenMotherBoard/android_device_samsung_gio" remote="gh" revision="jellybean" />
+  <project path="device/samsung/gio" name="Jellaxy/android_device_samsung_gio" remote="gh" revision="jellybean" />
   <project path="device/samsung/msm7x27-common" name="MoltenMotherBoard/android_device_samsung_msm7x27-common" remote="gh" revision="jellybean" />
 
   <project path="hardware/msm7k" name="platform/hardware/msm7k" />
