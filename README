@@ -1,6 +1,8 @@
 That's Galaxy GIO manifest
 
 For compiling, that's different from official MOZILLA's method:
+- mkdir B2G
+- cd B2G
 - repo init -u https://github.com/MoltenMotherBoard/b2g-manifest
 - repo sync
 - ./build.sh
