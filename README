@@ -1,10 +1,12 @@
-That's Galaxy GIO manifest
+That's Galaxy GIO manifest for B2G:
 
 For compiling, that's different from official MOZILLA's method:
 - mkdir B2G
 - cd B2G
 - repo init -u https://github.com/MoltenMotherBoard/b2g-manifest
 - repo sync
-- ./build.sh
+- . build/envsetup.sh
+- lunch /* Choose your build */
+- make -j1
 
 In essence, is the same method used for any Android distribution.
