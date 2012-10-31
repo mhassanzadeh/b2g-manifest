@@ -15,9 +15,6 @@
            remote="linaro"
            sync-j="4" />
 
-  <!-- Essential scripts -->
-  <project path="/" name="MoltenMotherBoard/B2G" remote="gh" revision="master" />
-
   <!-- Gonk specific things and forks -->
   <project path="build" name="platform_build" remote="b2g" revision="master">
     <copyfile src="core/root.mk" dest="Makefile" />
