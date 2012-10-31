@@ -99,11 +99,10 @@
   <project path="system/vold" name="platform/system/vold" />
 
   <!-- Galaxy GIO things -->
-  <project path="vendor/samsung" name="Jellaxy/proprietary_vendor_samsung" remote="gh" revision="jellybean" />
+  <project path="vendor/samsung" name="erikcas/proprietary_vendor_samsung/" remote="gh" revision="jellybean" />
   <project path="device/samsung/gio" name="erikcas/android_device_samsung_gio" remote="gh" revision="ics" />
-  <project path="device/samsung/msm7x27-common" name="Jellaxy/android_device_samsung_msm7x27-common" remote="gh" revision="jellybean" />
+  <project path="device/samsung/msm7x27-common" name="erikcas/android_device_samsung_msm7x27-common" remote="gh" revision="ics" />
 
-  <project path="hardware/msm7k" name="platform/hardware/msm7k" />
   <project path="hardware/ti/omap3" name="CyanogenMod/android_hardware_ti_omap3" remote="gh" revision="ics" />
   <project path="hardware/ti/wlan" name="CyanogenMod/android_hardware_ti_wlan" remote="gh" revision="ics" />
   <project path="hardware/ti/wpan" name="CyanogenMod/android_hardware_ti_wpan" remote="gh" revision="jellybean" />
