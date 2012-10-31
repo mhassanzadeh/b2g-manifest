@@ -1,0 +1,8 @@
+That's Galaxy GIO manifest
+
+For compiling, that's different from official MOZILLA's method:
+- repo init -u https://github.com/MoltenMotherBoard/b2g-manifest
+- repo sync
+- ./build.sh
+
+In essence, is the same method used for any Android distribution.
