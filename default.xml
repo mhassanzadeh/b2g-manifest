@@ -5,14 +5,20 @@
            fetch="https://android.googlesource.com/" />
   <remote name="b2g"
           fetch="git://github.com/mozilla-b2g/" />
-  <remote  name="linaro"
-           fetch="git://android.git.linaro.org/" />
-  <remote  name="gh"
-           fetch="git://github.com/" />
   <remote name="mozilla"
 	  fetch="git://github.com/mozilla/" />
-  <default revision="refs/tags/android-4.0.4_r1.2"
-           remote="linaro"
+  <remote name="lgics"
+	  fetch="git://github.com/lgics/" />
+  <remote name="erikcas"
+	  fetch="git://github.com/erikcas/" />
+  <remote name="cm9"
+	  fetch="git://github.com/CyanogenMod/" />
+  <remote name="caf"
+          fetch="git://codeaurora.org/" />
+  <remote  name="linaro"
+           fetch="git://android.git.linaro.org/" />
+  <default revision="ics_chocolate"
+           remote="caf"
            sync-j="4" />
 
   <!-- Gonk specific things and forks -->
@@ -24,11 +30,13 @@
   <project path="gecko" name="releases-mozilla-central" remote="mozilla" revision="master" />
   <project path="gonk-misc" name="gonk-misc" remote="b2g" revision="master" />
   <project path="rilproxy" name="rilproxy" remote="b2g" revision="master" />
+  <project path="external/moztt" name="moztt" remote="b2g" revision="master" />
 
   <!-- Stock Android things -->
   <project path="abi/cpp" name="platform/abi/cpp" />
   <project path="bionic" name="platform/bionic" />
   <project path="bootable/recovery" name="platform/bootable/recovery" />
+  <project path="development" name="platform/development" />
   <project path="device/common" name="device/common" />
   <project path="device/sample" name="device/sample" />
   <project path="external/apache-http" name="platform/external/apache-http" />
@@ -58,33 +66,34 @@
   <project path="external/libphonenumber" name="platform/external/libphonenumber" />
   <project path="external/libpng" name="platform/external/libpng" />
   <project path="external/libvpx" name="platform/external/libvpx" />
+  <project path="external/llvm" name="platform/external/llvm" />
   <project path="external/mksh" name="platform/external/mksh" />
   <project path="external/opensans" name="platform_external_opensans" remote="b2g" revision="master" />
   <project path="external/openssl" name="platform/external/openssl" />
   <project path="external/protobuf" name="platform/external/protobuf" />
   <project path="external/safe-iop" name="platform/external/safe-iop" />
   <project path="external/screencap-gonk" name="screencap-gonk" remote="b2g" revision="master" />
-  <project path="external/skia" name="platform/external/skia" />
+  <project path="external/skia" name="android_external_skia" remote="cm9" revision="ics" />
   <project path="external/sonivox" name="platform/external/sonivox" />
   <project path="external/speex" name="platform/external/speex" />
-  <project path="external/sqlite" name="platform/external/sqlite" />
+  <project path="external/sqlite" name="platform/external/sqlite" revision="fb30e613139b8836fdc8e81e166cf3a76e5fa17f"/>
   <project path="external/stlport" name="platform/external/stlport" />
   <project path="external/strace" name="platform/external/strace" />
   <project path="external/tagsoup" name="platform/external/tagsoup" />
   <project path="external/tinyalsa" name="platform/external/tinyalsa" />
   <project path="external/tremolo" name="platform/external/tremolo" />
+  <project path="external/unbootimg" name="unbootimg" remote="b2g" revision="master" />
   <project path="external/webp" name="platform/external/webp" />
-  <project path="external/webrtc" name="platform/external/webrtc" />
+  <project path="external/webrtc" name="android_external_webrtc" remote="cm9" revision="ics" />
   <project path="external/wpa_supplicant" name="platform/external/wpa_supplicant" />
-  <project path="external/wpa_supplicant_8" name="platform/external/wpa_supplicant_8" />
+  <project path="external/wpa_supplicant_6" name="android_external_wpa_supplicant_6" remote="cm9" revision="ics" />
   <project path="external/zlib" name="platform/external/zlib" />
   <project path="external/yaffs2" name="platform/external/yaffs2" />
-  <project path="frameworks/base" name="platform/frameworks/base" />
+  <project name="platform/frameworks/base" path="frameworks/base" revision="49aed1902b259173c8d3ca12727031c3fc464a14"/>
   <project path="frameworks/opt/emoji" name="platform/frameworks/opt/emoji" />
   <project path="frameworks/support" name="platform/frameworks/support" />
   <project path="hardware/libhardware" name="platform/hardware/libhardware" />
   <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" />
-  <project path="hardware/ril" name="platform/hardware/ril" />
   <project path="libcore" name="platform/libcore" />
   <project path="ndk" name="platform/ndk" />
   <project path="prebuilt" name="platform/prebuilt" />
@@ -96,14 +105,16 @@
   <project path="system/vold" name="platform/system/vold" />
 
   <!-- Galaxy GIO things -->
-  <project path="vendor/samsung" name="erikcas/proprietary_vendor_samsung/" remote="gh" revision="jellybean" />
-  <project path="device/samsung/gio" name="erikcas/android_device_samsung_gio" remote="gh" revision="ics" />
-  <project path="device/samsung/msm7x27-common" name="erikcas/android_device_samsung_msm7x27-common" remote="gh" revision="ics" />
-
-  <project path="hardware/ti/omap3" name="CyanogenMod/android_hardware_ti_omap3" remote="gh" revision="ics-release" />
-  <project path="hardware/ti/wlan" name="CyanogenMod/android_hardware_ti_wlan" remote="gh" revision="ics-release" />
-  <project path="hardware/ti/wpan" name="CyanogenMod/android_hardware_ti_wpan" remote="gh" revision="jellybean" />
-  <project path="hardware/qcom/audio" name="CyanogenMod/android_hardware_qcom_audio" remote="gh" revision="ics" />
-  <project path="hardware/qcom/display" name="CyanogenMod/android_hardware_qcom_display" remote="gh" revision="ics-release" />
-
+  <project path="vendor/samsung" name="proprietary_vendor_samsung/" remote="erikcas" revision="jellybean" />
+  <project path="device/samsung/gio" name="android_device_samsung_gio" remote="erikcas" revision="ics" />
+  <project path="device/samsung/msm7x27-common" name="cm_device_lge_msm7x27-common" remote="lgics" revision="Firefox-OS"/>
+  <project path="kernel/samsung/msm7x27" name="android_kernel_samsung_msm7x27" remote="erikcas" revision="ics" />
+ 
+  <project path="hardware/qcom/display" name="hardware_qcom_display" remote="b2g" />
+  <project path="hardware/qcom/media" name="platform/hardware/qcom/media" />
+  <project path="hardware/qcom/gps" name="android_hardware_qcom_gps" remote="cm9" revision="ics" />
+  <project path="hardware/msm7k" name="android_hardware_msm7k" remote="cm9" revision="ics" />
+  <project path="vendor/qcom/opensource/omx/mm-core" name="platform/vendor/qcom-opensource/omx/mm-core" />
+  <project path="hardware/ril" name="android_hardware_ril" remote="cm9" revision="ics" />
+</manifest>
 </manifest>
