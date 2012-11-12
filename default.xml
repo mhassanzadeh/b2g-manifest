@@ -116,5 +116,5 @@
   <project path="hardware/msm7k" name="android_hardware_msm7k" remote="cm9" revision="ics" />
   <project path="vendor/qcom/opensource/omx/mm-core" name="platform/vendor/qcom-opensource/omx/mm-core" />
   <project path="hardware/ril" name="android_hardware_ril" remote="cm9" revision="ics" />
-</manifest>
+
 </manifest>
