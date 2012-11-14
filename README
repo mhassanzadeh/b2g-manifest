@@ -1,6 +1,10 @@
 That's Galaxy GIO manifest for B2G:
 
 For compiling, that's different from official MOZILLA's method:
+- mkdir ~/bin
+- PATH=~/bin:$PATH
+- curl https://dl-ssl.google.com/dl/googlesource/git-repo/repo > ~/bin/repo
+- chmod a+x ~/bin/repo
 - mkdir B2G
 - cd B2G
 - repo init -u https://github.com/MoltenMotherBoard/b2g-manifest
