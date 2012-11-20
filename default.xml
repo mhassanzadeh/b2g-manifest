@@ -104,9 +104,9 @@
   <project path="system/netd" name="platform/system/netd" />
   <project path="system/vold" name="platform/system/vold" />
 
-  <!-- Galaxy GIO things -->
+  <!-- Galaxy ACE things -->
   <project path="vendor/samsung" name="proprietary_vendor_samsung" remote="erikcas" revision="jellybean" />
-  <project path="device/samsung/gio" name="android_device_samsung_gio" remote="erikcas" revision="ics" />
+  <project path="device/samsung/cooper" name="android_device_samsung_cooper" remote="erikcas" revision="jellybean" />
   <project path="device/samsung/msm7x27-common" name="android_device_samsung_msm7x27-common" remote="erikcas" revision="ics"/>
   <project path="kernel/samsung/msm7x27" name="android_kernel_samsung_msm7x27" remote="erikcas" revision="ics" />
  
