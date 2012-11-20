@@ -14,7 +14,7 @@
   <remote name="cm9"
 	  fetch="https://github.com/CyanogenMod/" />
   <remote name="caf"
-          fetch="https://codeaurora.org/" />
+          fetch="git://codeaurora.org/" />
   <remote  name="linaro"
            fetch="https://android.git.linaro.org/" />
   <default revision="ics_chocolate"
