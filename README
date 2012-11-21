@@ -7,7 +7,7 @@ For compiling, that's different from official MOZILLA's method:
 - chmod a+x ~/bin/repo
 - mkdir B2G
 - cd B2G
-- repo init -u https://github.com/MoltenMotherBoard/b2g-manifest
+- repo init -u https://github.com/mhassanzadeh/b2g-manifest
 - repo sync
 - . build/envsetup.sh
 - lunch /* Choose your build */
